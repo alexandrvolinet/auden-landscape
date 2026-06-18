@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
@@ -8,6 +8,21 @@ import ProjectPage from './pages/ProjectPage';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect');
+    if (redirect) {
+      sessionStorage.removeItem('redirect');
+      const path = redirect.replace(/^\/auden-landscape/, '') || '/';
+      navigate(path, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -22,7 +37,8 @@ export default function App() {
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/auden-landscape">
+        <RedirectHandler />
         <ScrollToTop />
         <Helmet>
           <title>Auden Landscape Architecture | Premium Garden & Park Design Studio</title>

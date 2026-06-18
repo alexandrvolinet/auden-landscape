@@ -6,6 +6,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/auden-landscape/', 
     plugins: [
       react(),
       tailwindcss(),
@@ -20,9 +21,9 @@ export default defineConfig(() => {
           theme_color: '#2C1810',
           background_color: '#F9F6F0',
           display: 'standalone',
-          scope: '/',
-          start_url: '/',
-          icons: [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
+          scope: '/auden-landscape/',
+          start_url: '/auden-landscape/',
+          icons: [{ src: '/auden-landscape/favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
         },
         workbox: {
           globPatterns: ['**/*.{js,css,html,svg,woff2}'],

@@ -1,7 +1,8 @@
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
-const SITE_URL = process.env.SITE_URL;
+const SITE_URL =
+  process.env.SITE_URL || 'https://alexandrvolinet.github.io/auden-landscape';
 
 const routes = [
   { path: '/', changefreq: 'monthly', priority: '1.0' },
