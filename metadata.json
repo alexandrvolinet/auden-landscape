@@ -1,0 +1,6 @@
+{
+  "name": "Auden Landscape Architecture",
+  "description": "A premium, sophisticated landscape architecture and design studio website showcasing residential gardens, public parks, and architectural landscaping tailored to integrate nature with structure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
