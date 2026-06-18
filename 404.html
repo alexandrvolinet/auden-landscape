@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auden Landscape Architecture</title>
+    <script>
+      (function () {
+        var redirect = location.pathname + location.search + location.hash;
+        if (redirect !== '/auden-landscape/' && redirect !== '/auden-landscape') {
+          sessionStorage.redirect = redirect;
+        }
+        location.replace('/auden-landscape/');
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
