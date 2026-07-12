@@ -79,24 +79,30 @@ export default function Carousel() {
             animate={{ x: -(currentIndex * 100) + '%' }}
             transition={{ type: 'tween', duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {PROJECTS.map((project) => (
-              <div
-                key={project.id}
-                className="relative min-w-full h-full overflow-hidden rounded-3xl"
-              >
-                <img
-                  src={project.imageUrl}
-                  srcSet={buildSrcSet(project.imageUrl)}
-                  sizes={buildSizes()}
-                  alt={`${project.title} landscape architecture design`}
-                  referrerPolicy="no-referrer"
-                  width={1600}
-                  height={1067}
-                  className="h-full w-full object-cover select-none"
-                  draggable={false}
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#2C1810]/95 via-[#2C1810]/40 to-transparent" />
+            {PROJECTS.map((project, idx) => {
+              const isNearby = Math.abs(idx - currentIndex) <= 1;
+              return (
+                <div
+                  key={project.id}
+                  className="relative min-w-full h-full overflow-hidden rounded-3xl"
+                >
+                  {isNearby ? (
+                    <img
+                      src={project.imageUrl}
+                      srcSet={buildSrcSet(project.imageUrl)}
+                      sizes={buildSizes([400, 800, 1184])}
+                      alt={`${project.title} landscape architecture design`}
+                      referrerPolicy="no-referrer"
+                      width={1600}
+                      height={1067}
+                      className="h-full w-full object-cover select-none"
+                      draggable={false}
+                      decoding="async"
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-light-beige" />
+                  )}
+                  <div className="absolute inset-0 bg-linear-to-t from-[#2C1810]/95 via-[#2C1810]/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 flex flex-col md:flex-row md:items-end justify-between gap-6 z-10">
                   <div className="space-y-3 text-left">
                     <div className="flex items-center space-x-3">
@@ -121,8 +127,9 @@ export default function Carousel() {
                     </Link>
                   </div>
                 </div>
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </motion.div>
         </div>
 

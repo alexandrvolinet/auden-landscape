@@ -54,7 +54,7 @@ const PROJECT_ITEMS = [
     year: '2025',
     location: 'Majorca, Spain',
     imageUrl:
-      'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=75',
     description:
       'A Mediterranean residence transformed into a luminous indoor-outdoor sanctuary through layered stone terraces, reflective water channels, and climate-adaptive planting.',
     overview:
@@ -66,7 +66,7 @@ const PROJECT_ITEMS = [
     year: '2024',
     location: 'Kyoto, Japan',
     imageUrl:
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=75',
     description:
       'A 12-acre civic park that balances active community zones with contemplative woodland walks, framed by ochre-toned pathways and endemic Japanese flora.',
     overview:
@@ -78,7 +78,7 @@ const PROJECT_ITEMS = [
     year: '2025',
     location: 'Napa Valley, California',
     imageUrl:
-      'https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=1600&q=75',
     description:
       "A multi-level deck and garden system that extends a Napa Valley winery's hospitality into the oak woodland canopy, blending entertainment with ecology.",
     overview:
@@ -90,7 +90,7 @@ const PROJECT_ITEMS = [
     year: '2023',
     location: 'Zurich, Switzerland',
     imageUrl:
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=75',
     description:
       'A minimalist urban courtyard where raw stone monoliths and reflective water surfaces create a meditative retreat within a dense Zurich city block.',
     overview:
@@ -113,7 +113,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'The team at Auden translated our modern, rather brutalist structure into an incredibly inviting family sanctuary. Their structural usage of native stone and warm golden lighting creates a breathtaking dialogue.',
     avatarUrl:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=75',
   },
   {
     id: 'test-2',
@@ -122,7 +122,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'Bringing Auden into the conceptual masterplanning phase was our best decision. They navigated civic constraints while retaining a stunning, natural, warm sandstone walkway aesthetic that our residents cherish.',
     avatarUrl:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=75',
   },
   {
     id: 'test-3',
@@ -131,7 +131,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'Every view from our indoor pavilion is now a framed painting. Auden understood deep ecological details, creating windbreaks and retaining water features that make the winery garden a serene, low-maintenance heaven.',
     avatarUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&',
   },
 ];
 
@@ -191,7 +191,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     description:
       'Over 20 years refining the intersection of structural design and botanical composition. James leads every project from first sketch to final walkthrough.',
     avatarUrl:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=75',
   },
   {
     id: 'team-2',
@@ -200,7 +200,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     description:
       "A specialist in native plant ecology and water-feature integration. Linh brings a sculptor's eye to every garden, terrace, and courtyard layout.",
     avatarUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=75',
   },
   {
     id: 'team-3',
@@ -209,7 +209,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     description:
       'Marcus translates blueprints into built reality with obsessive attention to grading, drainage, and stonework. His team has installed over 80 landmark projects.',
     avatarUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80',
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=75',
   },
 ];
 
@@ -241,6 +241,6 @@ export const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export const LANDSCAPE_HERO_IMAGE =
-  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80';
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=65';
 export const LANDSCAPE_CTA_IMAGE =
-  'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80';
+  'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=75';

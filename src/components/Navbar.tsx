@@ -31,10 +31,11 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
 
     let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          setScrolled(scrollY > 50);
+
           const current = NAV_LINKS.find(({ sectionId }) => {
             const el = document.getElementById(sectionId);
             if (el) {
@@ -109,11 +110,7 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
                 >
                   {link.name}
                   {activeSection === link.sectionId && (
-                    <motion.div
-                      layoutId="activeIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-golden-brown"
-                      transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
-                    />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-golden-brown transition-all duration-300 ease-in-out" />
                   )}
                 </a>
               ))}

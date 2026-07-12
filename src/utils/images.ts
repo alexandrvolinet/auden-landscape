@@ -1,10 +1,10 @@
 export function buildSrcSet(url: string, widths: number[] = [400, 800, 1200, 1600]): string {
-  const base = url.replace(/([?&])w=\d+&q=\d+/, '$1');
+  const base = url.replace(/([?&])w=\d+&?q=\d+/, '$1').replace(/[?&]$/, '');
   return widths
     .map((w) => {
-      const q = w <= 400 ? 60 : w <= 800 ? 75 : 80;
-      const suffix = base.includes('?') ? `&w=${w}&q=${q}` : `?auto=format&fit=crop&w=${w}&q=${q}`;
-      return `${base}${suffix} ${w}w`;
+      const q = w <= 400 ? 50 : w <= 800 ? 65 : 75;
+      const sep = base.includes('?') ? '&' : '?';
+      return `${base}${sep}auto=format&fit=crop&w=${w}&q=${q}&fm=webp ${w}w`;
     })
     .join(', ');
 }

@@ -55,8 +55,9 @@ export default function ProjectPage({ onOpenQuote }: ProjectPageProps) {
           width={1600}
           height={1067}
           className="h-full w-full object-cover"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/90 via-[#2C1810]/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#2C1810]/90 via-[#2C1810]/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

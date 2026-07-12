@@ -51,6 +51,7 @@ export default function Team() {
                 height={200}
                 className="h-24 w-24 rounded-full object-cover border-2 border-golden-brown mb-5"
                 loading="lazy"
+                decoding="async"
               />
               <h3 className="font-serif text-xl font-bold text-dark-brown">{member.name}</h3>
               <span className="text-xs font-semibold uppercase tracking-[0.15em] text-golden-brown mt-1 mb-3">

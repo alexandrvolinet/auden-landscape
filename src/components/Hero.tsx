@@ -9,8 +9,8 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenQuote }: HeroProps) {
-  const handleScrollToAbout = () => {
-    scrollToElement('about');
+  const handleScrollToServices = () => {
+    scrollToElement('services');
   };
 
   const handleScrollToProjects = () => {
@@ -27,13 +27,14 @@ export default function Hero({ onOpenQuote }: HeroProps) {
         <img
           src={LANDSCAPE_HERO_IMAGE}
           srcSet={buildSrcSet(LANDSCAPE_HERO_IMAGE)}
-          sizes={buildSizes()}
+          sizes={buildSizes([400, 800, 1280, 1920])}
           alt="Premium Architecture integrated with Landscape Gardens"
           referrerPolicy="no-referrer"
           width={1920}
           height={1280}
           className="h-full w-full object-cover scale-105 select-none"
           fetchPriority="high"
+          decoding="async"
         />
         {/* Overlay + decorative edge */}
         <div className="absolute inset-0 z-10 bg-dark-brown/70" />
@@ -106,7 +107,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
 
       {/* "Explore Studio" scroll prompt */}
       <motion.button
-        onClick={handleScrollToAbout}
+        onClick={handleScrollToServices}
         id="hero-scroll-trigger"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}

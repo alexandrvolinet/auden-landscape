@@ -134,9 +134,6 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                     Share your vision with us, and let us design a sanctuary that elevates your
                     architecture.
                   </p>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-golden-brown border border-golden-brown/30 rounded-md px-3 py-1.5 inline-block">
-                    Demo — no email sent
-                  </p>
                 </div>
 
                 {/* Name */}

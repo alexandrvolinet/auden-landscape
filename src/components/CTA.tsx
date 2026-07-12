@@ -42,6 +42,7 @@ export default function CTA({ onOpenQuote }: CTAProps) {
           height={1280}
           className="h-full w-full object-cover select-none"
           loading="lazy"
+          decoding="async"
         />
       </motion.div>
       <div className="absolute inset-0 z-10 bg-dark-brown/75" />

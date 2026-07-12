@@ -16,7 +16,7 @@ export default function Testimonials() {
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-dark-brown">
             Client Testimonials
           </h2>
-          <div className="h-0.5-12 bg-golden-brown" />
+          <div className="h-0.5 w-12 bg-golden-brown" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import { scrollToElement } from '../utils/scroll';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import Team from '../components/Team';
 import Services from '../components/Services';
 import Process from '../components/Process';
-import Carousel from '../components/Carousel';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
-import CTA from '../components/CTA';
+
+const Carousel = lazy(() => import('../components/Carousel'));
+const CTA = lazy(() => import('../components/CTA'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const About = lazy(() => import('../components/About'));
+const Team = lazy(() => import('../components/Team'));
+const FAQ = lazy(() => import('../components/FAQ'));
 
 interface HomeProps {
   onOpenQuote: () => void;
@@ -30,12 +31,14 @@ export default function Home({ onOpenQuote }: HomeProps) {
       <Hero onOpenQuote={onOpenQuote} />
       <Services />
       <Process />
-      <Carousel />
-      <CTA onOpenQuote={onOpenQuote} />
-      <Testimonials />
-      <About />
-      <Team />
-      <FAQ />
+      <Suspense>
+        <Carousel />
+        <CTA onOpenQuote={onOpenQuote} />
+        <Testimonials />
+        <About />
+        <Team />
+        <FAQ />
+      </Suspense>
     </>
   );
 }
