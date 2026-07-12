@@ -12,12 +12,28 @@
     <link rel="canonical" href="https://alexandrvolinet.github.io/auden-landscape" />
     <link rel="icon" type="image/svg+xml" href="/auden-landscape/favicon.svg" />
 
-    <!-- Google Fonts (preconnect + swap to avoid render blocking) -->
+    <!-- Google Fonts (non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Preload hero image (LCP) -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80"
+      fetchpriority="high"
     />
 
     <!-- Open Graph -->
@@ -74,8 +90,8 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/auden-landscape/assets/index-BrACLMMz.js"></script>
-    <link rel="stylesheet" crossorigin href="/auden-landscape/assets/index-DnWNNooX.css">
+    <script type="module" crossorigin src="/auden-landscape/assets/index-kDGah2RX.js"></script>
+    <link rel="stylesheet" crossorigin href="/auden-landscape/assets/index-BbRVs9oH.css">
   <link rel="manifest" href="/auden-landscape/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/auden-landscape/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
